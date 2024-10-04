@@ -23,3 +23,7 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 
 --vim.keymap.set("n", "<leader>oc", ':silent !chromium-browser %<CR>')
 vim.api.nvim_set_keymap('n', '<leader>oc',':!start "" "C:/Program Files/Google/Chrome/Application/chrome.exe" -ArgumentList " --disable-print-preview" "file:///%:p"<CR>', { noremap = true, silent = true })
+
+
+--custom balaakay keybinds
+vim.keymap.set("n", "<leader>py", ":w<CR>:!python %<CR>")

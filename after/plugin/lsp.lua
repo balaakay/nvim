@@ -36,7 +36,23 @@ require('lspconfig').lua_ls.setup({
 })
 require('lspconfig').eslint.setup({})
 require('lspconfig').ts_ls.setup{}
-require('lspconfig').pylsp.setup({})
+require('lspconfig').pylsp.setup({
+    settings = {
+        pylsp = {
+            plugins = {
+                pylint = {
+                    enabled = true,
+                    args = { "--disable=invalid-name" }
+                },
+                --pyflakes = { enabled = true },
+                --pycodestyle = { enabled = true },
+                jedi = {
+                    environment = "/home/Documents/projects/housingMarketResearch/mainVenv/bin/python"
+                }
+            }
+        }
+    }
+})
 require('lspconfig').sqlls.setup({})
 require('lspconfig').vuels.setup({})
 
